@@ -1,0 +1,32 @@
+{
+  "name": "advent-of-code.ts",
+  "version": "0.0.1",
+  "description": "Advent of code",
+  "type": "module",
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "compile": "tsc --build tsconfig.json",
+    "clean": "rm -rf ./*.tsbuildinfo ./dist",
+
+    "prestart": "npm run compile",
+    "start": "node --enable-source-maps",
+
+    "pretest": "npm run compile",
+    "test": "node --enable-source-maps --test",
+
+    "watch": "tsc-watch --build tsconfig.json --preserveWatchOutput",
+
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "author": "stefanvanderwolf",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@types/node": "^22.13.4",
+    "eslint": "^9.20.1",
+    "tsc-watch": "^6.2.1",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.1"
+  }
+}
